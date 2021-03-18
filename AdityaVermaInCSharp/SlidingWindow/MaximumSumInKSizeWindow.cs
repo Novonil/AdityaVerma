@@ -32,7 +32,7 @@ namespace AdityaVermaInCSharp.SlidingWindow
 		}
 		public static int maxSumBruteForce(int size, List<int> arr, int K)
 		{
-			int maxSum = int.MinValue;
+			int maxiSum = int.MinValue;
 
 			for(int i = 0; i<size-K + 1; i++)
 			{
@@ -41,9 +41,9 @@ namespace AdityaVermaInCSharp.SlidingWindow
 				{
 					sum += arr[j];
 				}
-				maxSum = Math.Max(maxSum, sum);
+				maxiSum = Math.Max(maxiSum, sum);
 			}
-			return maxSum;
+			return maxiSum;
 		}
 	}
 }

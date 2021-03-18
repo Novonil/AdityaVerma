@@ -51,17 +51,17 @@ namespace AdityaVermaInCSharp.SlidingWindow
 
 			for (int i = 0; i < size - K + 1; i++)
 			{
-				bool foundNegative = false;
+				bool foundNegatives = false;
 				for (int j = i; j < i + K; j++)
 				{
 					if (arr[j] < 0)
 					{
-						foundNegative = true;
+						foundNegatives = true;
 						result.Add(arr[j]);
 						break;
 					}
 				}
-				if (!foundNegative)
+				if (!foundNegatives)
 				{
 					result.Add(0);
 				}

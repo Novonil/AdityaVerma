@@ -32,7 +32,7 @@ namespace AdityaVermaInCSharp
 			arr.Add(8);
 			arr.Add(2);
 			arr.Add(9);
-			arr.Add(100);
+			arr.Add(10);
 
 			int sum = MaximumSumInKSizeWindow.maxSumBruteForce(arr.Count, arr, 3);
 			Console.WriteLine(sum);
