@@ -26,11 +26,7 @@ namespace AdityaVermaInCSharp.SlidingWindow
 				}
 				count = charMap.Count;
 
-				if(count < K)
-				{
-
-				}
-				else if (count == K)
+				if (count == K)
 				{
 					maxLengthOfSubstring = Math.Max(maxLengthOfSubstring, j - i + 1);
 
@@ -58,9 +54,34 @@ namespace AdityaVermaInCSharp.SlidingWindow
 			return maxLengthOfSubstring;
 		}
 
-		//public static int longestWordBruteForce(int size, string str, int K)
-		//{ 
-			
-		//}
+		public static int longestSubstringBruteForce(int size, string str, int K)
+		{
+			int maxSubstring = 0;
+
+			for(int windowSize = 1; windowSize < size; windowSize++)
+			{
+				for(int left = 0; left < size - windowSize + 1; left++)
+				{
+					Dictionary<char, int> charMap = new Dictionary<char, int>();
+					for (int right = left; right < left + windowSize; right++)
+					{
+						if(charMap.ContainsKey(str[right]))
+						{
+							charMap[str[right]]++;
+						}
+						else
+						{
+							charMap.Add(str[right], 1);
+						}
+					}
+					if(charMap.Count == K)
+					{
+						maxSubstring = windowSize;
+						break;
+					}
+				}
+			}
+			return maxSubstring;
+		}
 	}
 }

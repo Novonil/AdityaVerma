@@ -51,7 +51,19 @@ namespace AdityaVermaInCSharp
 			List<int> result = new List<int>();
 			string str = "aabacbebebe";
 
-			int rs = LongestSubstringWithKUniqueCharacters.longestSubstring(str.Length, str, 3);
+			List<string> toys = new List<string>();
+			toys.Add("a");
+			toys.Add("a");
+			toys.Add("b");
+			toys.Add("a");
+			toys.Add("c");
+			toys.Add("b");
+			toys.Add("e");
+			toys.Add("b");
+			toys.Add("e");
+			toys.Add("b");
+			toys.Add("e");
+			int rs = PickToys.countOfToys(str.Length, toys,3);
 			Console.Write(rs);
 			//foreach(int r in result)
 			//{
