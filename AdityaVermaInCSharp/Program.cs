@@ -49,7 +49,9 @@ namespace AdityaVermaInCSharp
 			arr.Add(5);
 
 			List<int> result = new List<int>();
-			int rs = LargestSubarrayOfSumK.maximumWindowSize(arr.Count, arr, 5);
+			string str = "aabacbebebe";
+
+			int rs = LongestSubstringWithKUniqueCharacters.longestSubstring(str.Length, str, 3);
 			Console.Write(rs);
 			//foreach(int r in result)
 			//{
