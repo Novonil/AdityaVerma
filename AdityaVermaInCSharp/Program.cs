@@ -66,7 +66,7 @@ namespace AdityaVermaInCSharp
 			string str = "totmtaptat";
 			string tar = "tta";
 			
-			int rs = MinimumWindowSubstring.minimumSubstring(str.Length, str, tar);
+			int rs = MinimumWindowSubstring.minimumSubstringBruteForce(str.Length, str, tar);
 			Console.Write(rs);
 			//foreach(int r in result)
 			//{
