@@ -48,8 +48,6 @@ namespace AdityaVermaInCSharp
 			arr.Add(3);
 			arr.Add(5);
 
-			List<int> result = new List<int>();
-			string str = "aabacbebebe";
 
 			List<string> toys = new List<string>();
 			toys.Add("a");
@@ -63,7 +61,12 @@ namespace AdityaVermaInCSharp
 			toys.Add("e");
 			toys.Add("b");
 			toys.Add("e");
-			int rs = PickToys.countOfToys(str.Length, toys,3);
+
+			List<int> result = new List<int>();
+			string str = "totmtaptat";
+			string tar = "tta";
+			
+			int rs = MinimumWindowSubstring.minimumSubstring(str.Length, str, tar);
 			Console.Write(rs);
 			//foreach(int r in result)
 			//{
