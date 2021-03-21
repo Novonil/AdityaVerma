@@ -55,7 +55,7 @@ namespace AdityaVermaInCSharp.SlidingWindow
 			int minimumSubstring = int.MaxValue;
 
 
-			for(int windowSize = 1; windowSize < size; windowSize++)
+			for(int windowSize = 1; windowSize <= size; windowSize++)
 			{
 				for (int left = 0; left < size - windowSize + 1; left++)
 				{

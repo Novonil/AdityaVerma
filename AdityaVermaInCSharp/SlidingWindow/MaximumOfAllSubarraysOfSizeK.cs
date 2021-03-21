@@ -1,47 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AdityaVermaInCSharp.SlidingWindow
 {
 	class MaximumOfAllSubarraysOfSizeK
 	{
-		public static List<int> maxInWindow(int size, List<int> arr, int K)
+		public static int[] maxInWindow(int[] nums, int k)
 		{
-			int i = 0;
-			int j = 0;
-			Queue<int> maxQueue = new Queue<int>();
+
+			if (k > nums.Length)
+			{
+				int max = nums.Max();
+				return new int[] { max };
+			}
+			int left = 0;
+			int right = 0;
+			int size = nums.Length;
+			List<int> maxList = new List<int>();
 			List<int> result = new List<int>();
 
-			while(j<size)
+			while (right < size)
 			{
-				while(maxQueue.Count > 0 && arr[j] > maxQueue.Peek())
+				int windowSize = right - left + 1;
+				while (maxList.Count > 0 && nums[right] > maxList[maxList.Count - 1])
 				{
-					maxQueue.Dequeue();
+					maxList.RemoveAt(maxList.Count - 1);
 				}
-				maxQueue.Enqueue(arr[j]);
-
-				if(j - i + 1 < K)
+				maxList.Add(nums[right]);
+				if (windowSize < k)
 				{
-					j++;
+					right++;
 				}
-
-				else if(j - i + 1 == K)
+				else if (windowSize == k)
 				{
-					if(maxQueue.Count > 0)
+					if (maxList.Count > 0)
 					{
-						result.Add(maxQueue.Peek());
+						result.Add(maxList[0]);
 					}
-
-					if(maxQueue.Count > 0 && arr[i] == maxQueue.Peek())
+					if (maxList.Count > 0 && maxList[0] == nums[left])
 					{
-						maxQueue.Dequeue();
+						maxList.RemoveAt(0);
 					}
-					i++;
-					j++;
+					left++;
+					right++;
 				}
 			}
-			return result;
+			return result.ToArray();
 		}
 
 		public static List<int> maxInWindowBruteForce(int size, List<int> arr, int K)

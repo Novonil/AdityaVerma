@@ -66,8 +66,12 @@ namespace AdityaVermaInCSharp
 			string str = "totmtaptat";
 			string tar = "tta";
 			
-			int rs = MinimumWindowSubstring.minimumSubstringBruteForce(str.Length, str, tar);
-			Console.Write(rs);
+			int[] rs = MaximumOfAllSubarraysOfSizeK.maxInWindow(arr.ToArray(), 3);
+
+			foreach (int i in rs)
+			{
+				Console.Write(i + " ");
+			}
 			//foreach(int r in result)
 			//{
 			//	Console.Write(r + " ");
