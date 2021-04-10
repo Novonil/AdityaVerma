@@ -1,5 +1,6 @@
 ﻿using AdityaVermaInCSharp.Heaps;
 using AdityaVermaInCSharp.SlidingWindow;
+using AdityaVermaInCSharp.Stacks;
 using System;
 using System.Collections.Generic;
 
@@ -80,20 +81,47 @@ namespace AdityaVermaInCSharp
 			//	Console.Write(r + " ");
 			//}
 
-			int[][] arr = new int[4][];
-			arr[0] = new int[] { 1, 3 };
-			arr[1] = new int[] { -2, 2 };
-			arr[2] = new int[] { 5, 8 };
-			arr[3] = new int[] { 0, 1 };
+			//int[][] arr = new int[4][];
+			//arr[0] = new int[] { 1, 3 };
+			//arr[1] = new int[] { -2, 2 };
+			//arr[2] = new int[] { 5, 8 };
+			//arr[3] = new int[] { 0, 1 };
 
-			int[] nums = { 1,3,12,5,15,11 };
+			////int[] nums = { 6,2,5,4,5,1,6 };
+			//int[][] nums = new int[4][];
+			//nums[0] = new int[] { 0,1,1,0 };
+			//nums[1] = new int[] { 1,1,1,1 };
+			//nums[2] = new int[] { 1,1,1,1 };
+			//nums[3] = new int[] { 1,1,0,0 };
 
-			int res = SumOfElementsBetweenK1SmallestAndK2Largest.sum(nums,3,6);
-			Console.WriteLine(res);
-			//foreach (List<int> i in res)
+			//int res = MaximumAreaRectangleOfBinaryMatrix.maxArea(nums);
+
+			//MinStackNoExtraSpace.Push(18);
+			//MinStackNoExtraSpace.Push(19);
+			//MinStackNoExtraSpace.Push(29);
+			//int res = MinStackNoExtraSpace.Pop();
+			//Console.WriteLine(res);
+			//MinStackNoExtraSpace.Push(15);
+			//MinStackNoExtraSpace.Push(16);
+			//res = MinStackNoExtraSpace.Pop();
+			//Console.WriteLine(res);
+			//res = MinStackNoExtraSpace.Pop();
+			//Console.WriteLine(res); 
+			//res = MinStackNoExtraSpace.Pop();
+			//Console.WriteLine(res);
+			//res = MinStackNoExtraSpace.Peek();
+			//Console.WriteLine(res);
+			//res = MinStackNoExtraSpace.Pop();
+			//Console.WriteLine(res);
+			//res = MinStackNoExtraSpace.Peek();
+			//Console.WriteLine(res);
+			//foreach (int i in res)
 			//{
-			//	Console.WriteLine(i[0] + " , " + i[1] + " , " + i[2]);
+			//	Console.WriteLine(i);
 			//}
+			int[] nums = { 3,0,0,2,0,4 };
+			int res = RainWaterTrapping.totalWater(nums);
+			Console.WriteLine(res);
 			Console.ReadLine();
 		}
 	}
