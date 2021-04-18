@@ -1,4 +1,5 @@
-﻿using AdityaVermaInCSharp.Heaps;
+﻿using AdityaVermaInCSharp.BinarySearch;
+using AdityaVermaInCSharp.Heaps;
 using AdityaVermaInCSharp.SlidingWindow;
 using AdityaVermaInCSharp.Stacks;
 using System;
@@ -114,13 +115,19 @@ namespace AdityaVermaInCSharp
 			//res = MinStackNoExtraSpace.Pop();
 			//Console.WriteLine(res);
 			//res = MinStackNoExtraSpace.Peek();
-			//Console.WriteLine(res);
+			//Console.WriteLine(res);+
 			//foreach (int i in res)
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] nums = { 3,0,0,2,0,4 };
-			int res = RainWaterTrapping.totalWater(nums);
+			int[] nums = { 20, 17, 15,14,13,12,10,9,8,4  };
+			int[][] mat = new int[4][];
+			mat[0] = new int[] { 10,20,30,40 };
+			mat[1] = new int[] { 15,25,35,45 };
+			mat[2] = new int[] { 27,29,37,48};
+			mat[3] = new int[] { 32, 33, 39, 50};
+
+			int res = BinarySearchDescending.search(nums,10);
 			Console.WriteLine(res);
 			Console.ReadLine();
 		}
